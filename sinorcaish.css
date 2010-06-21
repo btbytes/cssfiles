@@ -1,3 +1,3 @@
-@import url("sinorcaish-screen.css");
-@import url("sinorcaish-print.css");
+@import url("sinorcaish-screen.css") screen;
+@import url("sinorcaish-print.css") print;
 
