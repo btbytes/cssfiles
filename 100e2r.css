@@ -1,0 +1,53 @@
+@import("normalize.css");
+
+html > body {
+   font-size: 140%;
+}
+
+body {
+    font-family:"Minion Pro",Gentium,"Gentium Basic","Hoefler Text",Constantia,"Palatino Linotype",Georgia,serif;
+    margin: 0em auto 4em auto;
+    width: 23em;
+    max-width: 23em;
+    line-height: 1.4em;
+    color:#424244;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    border-bottom: dotted 1px #424244;
+}
+h1.title, h2.author, h3.date {
+    text-align:center;
+}
+
+h1.title{
+    font-style: italic;
+    line-height: 1.05em;
+}
+
+h2.author {
+    font-variant: small-caps;
+    margin-top: 0em;
+    font-size: 1em;
+}
+
+h3.date {
+    margin-top: 0em;
+    font-size: 1em;
+}
+h2 {
+    text-align:center;
+}
+h3{
+    font-style: italic;
+    text-align:center;
+}
+
+img {
+    margin: 0px;
+    padding: 3px;
+}
