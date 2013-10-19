@@ -4,15 +4,17 @@ CSS Files
 The 100% easy to read standard
 ------------------------------
 
-The `100e2r.css` is inspired by [IA' post](http://ia.net/blog/100e2r/)
-which uses `normalize.css` as the base.
+The `100e2r.css` is inspired by [IA' post](http://ia.net/blog/100e2r/).
+
+
 
 Features:
 
-  * Good typography
-  * Has style elements for [Pandoc](http://johnmacfarlane.net/pandoc/)
-    so that when you are previewing documents written using pandoc, they
-    show up nicely in preview.
+  * Uses [normalize.css](http://necolas.github.io/normalize.css/) as the
+    base, to render all HTML elements consistently and in line with
+    modern standards.
+  * Good typography with easy to read font size and line-spacing.
+  * Has style elements for [Pandoc](http://johnmacfarlane.net/pandoc/).
   * The body font size is set at `140%`, which results in a font-size of
     about `16pt`s.
   * The column width is `23em` which translates to around `500px`, which
