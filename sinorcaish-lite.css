@@ -1,0 +1,621 @@
+/* sinorcaish-lite.css
+* a lighter version of sinorcaish.css
+* for documents without header/footer/sidebar elements.
+* for minimalistic HTML documents.
+*/
+
+/************************************************************************
+*                                                                       *
+*                  Sinorcaish Screen-based Style Sheet                  *
+*                 Copyright (C) 2004-07, John Zaitseff                  *
+*                                                                       *
+************************************************************************/
+
+/* Author:  John Zaitseff <J.Zaitseff@zap.org.au>
+   Version: 1.3
+
+   $Id: sinorcaish-screen.css 189 2007-03-22 01:35:44Z john $
+
+   This file provides the Sinorcaish style sheet for screen-based user
+   agents (ie, for ordinary Web browsers).  This file conforms to the
+   Cascading Style Sheets 2.1 specification.
+
+   The design of Sinorcaish is influenced by Sinorca (available from the
+   Open Source Web Design site, http://www.oswd.org/), which in turn was
+   based on the Acronis company web site (http://www.acronis.com/).  You
+   can find more information about this design from its home page on the
+   ZAP Group web site, http://www.zap.org.au/documents/styles/sinorcaish/.
+
+   This file may be redistributed and/or modified on the condition that
+   the original copyright notice is retained.
+*/
+
+
+/********** Global Styles **********/
+
+                /* The global font size is set to 90% as  */
+                /* most browsers' normal font size is too */
+                /* large, at least when using Verdana     */
+
+body {
+   font-family:     "Open Sans", "DejaVu Sans", "Bitstream Vera Sans", "Lucida Sans", Arial, Helvetica, sans-serif;
+   font-size:       100%;	/* Allow IE/Win to resize the document */
+   color:           black;
+   background:      #F0F0F0;
+   margin:          0;
+   padding:         0;
+   border:          none;
+}
+
+.hidden {			/* Used for content that should be displayed */
+                /* by non-stylesheet-aware browsers          */
+   display:         none !important;
+}
+
+.notprinted {			/* Used for content that should not be */
+}				/* printed to paper                    */
+
+
+/* Headings */
+
+h1,				/* Headings (H1-H6) should only be used in */
+h2,				/* the main content area                   */
+h3 {
+   font-weight:     bold;
+   text-align:      left;
+   margin:          1.5em 0 0 0;
+   padding:         0;
+}
+
+h4,
+h5,
+h6 {
+   font-weight:     bold;
+   text-align:      left;
+   margin:          1.25em 0 0 0;
+   padding:         0;
+}
+
+h1 { font-size:     175% }
+h2 { font-size:     145% }
+h3 { font-size:     120% }
+h4 { font-size:     105% }
+h5 { font-size:     80%  }
+h6 { font-size:     65%  }
+
+
+/* Anchors */
+
+a:link {
+   text-decoration: none;
+   color:           #0066CC;
+   background:      transparent;
+}
+
+a:visited {
+   text-decoration: none;
+   color:           #003399;
+   background:      transparent;
+}
+
+a:hover,
+a:active {
+   text-decoration: underline;
+}
+
+
+/* Inline elements and classes */
+
+                /* This style sheet assumes B, BIG, EM, I, */
+                /* SMALL, STRONG, SUB and SUP are defined  */
+                /* by the browser as per the HTML4 sample  */
+                /* style sheet.                            */
+code,
+kbd,
+samp,
+tt {
+   font-family:     "Courier New", Courier, monospace;
+   font-size:       115%;	/* Courier tends to be a little too small */
+   line-height:     1.0;	/* Otherwise lines tend to spread out */
+}
+
+kbd,
+code.markup,			/* HTML/CSS markup */
+span.markup,			/* Alternative form for HTML/CSS markup */
+.title {			/* Title in floating boxes / left sidebar */
+   font-weight:     bolder;
+}
+
+abbr,
+acronym {
+   font:            inherit;	/* Don't use small-caps, etc. */
+}
+
+.tooltip {
+   cursor:          help;
+   border-bottom:   1px dotted #CCCCCC;
+}
+
+abbr[title],
+acronym[title] {
+   cursor:          help;
+   border-bottom:   1px dotted #CCCCCC;
+}
+
+cite,
+dfn,
+var,
+.fn,				/* Filename */
+.url,				/* Uniform Resource Locator */
+.email {			/* E-mail address */
+   font-style:      italic;
+}
+
+.program,			/* Command-line name of a computer program */
+.window,			/* Window or dialog box name */
+.menu,				/* Menu item in a computer program */
+.gui,				/* Generic GUI element in a computer program */
+.key {				/* Keypress in a computer program */
+   font-weight:     bolder;
+}
+
+.clearboxes {			/* Clear navboxes and floatboxes */
+   clear:           right;
+}
+
+.unicode {
+   font-family:     "Arial Unicode MS", "Lucida Sans Unicode", Verdana, "DejaVu Sans", "Bitstream Vera Sans", "Lucida Sans", Arial, Helvetica, sans-serif;
+}
+
+
+/* Block-inline elements and classes */
+
+img {
+   vertical-align:  baseline;
+   margin:          0;
+   padding:         0;
+   border:          none;
+}
+
+img.icon16 {			/* For 16x16 file-type icons */
+   vertical-align:  -2px;
+}
+
+del,
+del * {				/* Required for Mozilla */
+   text-decoration: line-through;
+}
+
+ins,
+ins * {				/* Required for Mozilla */
+   text-decoration: underline;
+}
+
+.floatleft {			/* Left-floating images and spans */
+   margin:          0.5em 1.5em 0.5em 0;
+   float:           left;
+}
+
+.floatright {			/* Right-floating images and spans */
+   margin:          0.5em 0 0.5em 1.5em;
+   float:           right;
+}
+
+.nowrap {
+   white-space:     nowrap;
+}
+
+
+/* Block elements */
+
+p {
+   margin:          1em 0;
+   padding:         0;
+}
+
+blockquote {			/* Should only be used in main content area, */
+                /* floating boxes or left sidebar.           */
+   margin:          1em 2.5em;
+   padding:         0;
+}
+
+pre {				/* Should only be used in main content area  */
+                /* and floating boxes.                       */
+   font-family:     "Courier New", Courier, monospace;
+   font-size:       115%;	/* Courier tends to be a little too small */
+   line-height:     1.2;
+   margin:          1em 2.5em;
+   padding:         0;
+}
+
+pre code,
+pre kbd,
+pre samp,
+pre tt {
+   font-size:       100%;	/* PRE is already enlarged above */
+   line-height:     1.2;	/* Use same value as for PRE above */
+}
+
+hr {
+   color:           #999999;
+   background:      transparent;
+   height:          1px;	/* Required for IE/Win */
+   margin:          0;
+   padding:         0;
+   border-color:    #999999;
+   border-width:    1px;
+   border-style:    none none solid none;
+}
+
+hr.lighter {			/* Warning: not printed out on paper */
+   color:           #F0F0F0;
+   background:      transparent;
+   border-color:    #F0F0F0;
+}
+
+
+/* Lists */
+
+ol {
+   list-style:      decimal outside;
+   margin:          1em 0;
+   padding:         0 0 0 2.5em;
+}
+
+ol.alpha {
+   list-style-type: lower-alpha;
+}
+
+ol.number {
+   list-style-type: decimal;
+}
+
+ul {
+   list-style:      square outside;
+   margin:          1em 0;
+   padding:         0 0 0 2.5em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+   margin-top:      0;
+   margin-bottom:   0;
+}
+
+ol ul,				/* Override possible browser styles */
+ol ol ul,
+ol ul ul,
+ul ul,
+ul ol ul,
+ul ul ul {
+   list-style:      square outside;
+}
+
+li {
+   margin:          0;
+   padding:         0;
+}
+
+dl {
+   margin:          1em 0;
+   padding:         0;
+}
+
+dt {
+   font:            inherit;	/* Don't make the text bold by default */
+   margin:          1em 0 0.25em 0;
+   padding:         0;
+}
+
+dd {
+   margin:          0 0 1em 2.5em;
+   padding:         0;
+}
+
+
+/* Tables */
+                /* Tables should never be used for visual */
+                /* formatting: that is the role of CSS!   */
+
+table.simple {
+   color:           inherit;
+   background:      inherit;	/* Don't make tables transparent */
+   border-collapse: collapse;
+   border-spacing:  0;
+   empty-cells:     show;
+   margin:          0.5em 2.5em;
+   padding:         0;
+   border:          1px solid #999999;
+}
+
+table.simple caption {
+   text-align:      center;
+   caption-side:    top;
+   margin:          0 2.5em 0.75em;
+   padding:         0;
+   border:          none;
+}
+
+table.simple td,
+table.simple th {
+   text-align:      center;
+   vertical-align:  middle;
+   margin:          0;
+   padding:         0.25em 0.5em;
+   border:          1px solid #999999;
+}
+
+table.simple th,
+table.simple td.highlight,
+table.simple th.highlight {
+   font-weight:     bold;
+   color:           inherit;
+   background:      #F0F0F0;
+}
+
+table.simple td.lighter,
+table.simple th.lighter {
+   color:           inherit;
+   background:      #F8F8F8;
+}
+
+table.simple td.left,
+table.simple th.left {
+   text-align:      left;
+}
+
+table.simple td.center,
+table.simple th.center {
+   text-align:      center;
+}
+
+table.simple td.right,
+table.simple th.right {
+   text-align:      right;
+}
+
+
+/* Forms */
+
+form {
+   margin:          1em 0;
+   padding:         0;
+   border:          none;
+}
+
+input,
+button,
+select,
+fieldset,
+legend {
+   font-family:     Verdana, "DejaVu Sans", "Bitstream Vera Sans", "Lucida Sans", Arial, Helvetica, sans-serif;
+   font-size:       95%;
+   color:           black;
+   background:      inherit;
+   vertical-align:  middle;
+}
+
+textarea {
+   font-family:     "Courier New", Courier, monospace;
+   font-size:       100%;
+   color:           black;
+   background:      inherit;
+   vertical-align:  middle;
+}
+
+fieldset {
+   font-size:       100%;
+   margin:          1em 0;
+   border:          1px solid #999999;
+}
+
+legend {
+   font-size:       100%;
+   margin:          0 0.5em;
+   padding:         0 0.25em;
+   border:          none;
+}
+
+table.formtable {
+   color:           inherit;
+   background:      inherit;
+   border-collapse: collapse;
+   border-spacing:  0;
+   empty-cells:     show;
+   margin:          0;
+   padding:         0;
+   border:          none;
+}
+
+table.formtable td,
+table.formtable th {
+   text-align:      justify;
+   vertical-align:  middle;
+   margin:          0;
+   padding:         0.25em 0.5em;
+   border:          none;
+}
+
+table.formtable th {
+   text-align:      center;
+   font-weight:     bold;
+}
+
+table.formtable td.label,
+table.formtable th.label {
+   text-align:      right;
+   vertical-align:  top;
+}
+
+table.formtable td.vertspace,
+table.formtable th.vertspace {
+   empty-cells:     show;
+   margin:          0;
+   padding:         0.5em 0;
+   height:          1em;	/* Required for IE/Win */
+}
+
+table.formtable fieldset {
+   margin:          0;
+}
+
+table.formtable fieldset td,
+table.formtable fieldset th {
+   margin:          0.25em 0.5em;
+}
+
+.reqfield {
+   color:           red;
+   background:      transparent;
+   font-weight:     bolder;
+}
+
+.info {
+   color:           gray;
+   background:      transparent;
+   font-size:       90%;
+}
+
+
+/* The following HTML elements should NOT be used in documents using this
+   style sheet:
+
+       address - use the #footer style instead
+       q       - use &ldquo; and &rdquo; instead
+*/
+
+
+
+body {
+   line-height:     1.5;
+   color:           black;
+   background:      white;
+   margin:          2em 2em auto;
+   padding:         0em;
+}
+
+h1 {
+   margin:          0 0 0.5em 0;
+}
+
+#main .highlight {		/* Highlight box (for warnings, etc) */
+   color:           inherit;
+   background:      #F0F0F0;
+   margin:          1em 0;
+   padding:         1em 2.5em;
+   border:          1px solid #999999;
+}
+
+
+#main table.simple td.highlight,  /* Else "#main .highlight" will override */
+#main table.simple th.highlight {
+   margin:          0;
+   padding:         0.25em 0.5em;
+}
+
+
+/********** Styles for Floating Boxes **********/
+
+                /* "navbox" is used to provide intra/inter- */
+                /* page links; it is NOT printed out on     */
+                /* paper.  "floatbox" is used to provide    */
+                /* floating boxes that may appear anywhere  */
+                /* in the main content; they ARE printed.   */
+.floatbox,
+.navbox {
+   overflow:        visible;
+   font-size:       95%;
+   line-height:     1.25;
+   margin:          0 0 0.75em 1.5em;
+   padding:         0.5em 1em;
+   border:          1px solid #999999;
+   float:           right;
+   clear:           right;
+}
+
+.floatbox {
+   color:           black;
+   background:      #F0F0F0;
+   width:           35%;
+}
+
+.navbox {
+   text-align:      left;
+   color:           black;
+   background:      white;
+   width:           12.5em;
+}
+
+.floatbox hr,			/* Used for non-stylesheet-aware browsers */
+.navbox hr {
+   display:         none !important;
+}
+
+.floatbox p,
+.navbox p {
+   margin:          0.75em 0;
+   padding:         0;
+}
+
+.floatbox ol,
+.floatbox ul {
+   margin:          0.75em 0;
+   padding:         0 0 0 1.5em;
+}
+
+.navbox ol,
+.navbox ul {
+   margin:          0.5em 0;
+   padding:         0 0 0 1.5em;
+}
+
+.floatbox blockquote {
+   margin:          0.75em 1.5em;
+   padding:         0;
+}
+
+.floatbox pre {
+   font-size:       95%;
+   margin:          0.75em 1.5em;
+   padding:         0;
+}
+
+.floatbox dt {
+   margin:          0.75em 0;
+   padding:         0;
+}
+
+.floatbox dt {
+   margin:          0.75em 0 0.25em 0;
+   padding:         0;
+}
+
+.floatbox dd {
+   margin:          0 0 0.75em 1.5em;
+   padding:         0;
+}
+
+.floatbox .highlight {
+   color:           inherit;
+   background:      white;
+   margin:          0.75em 0;
+   padding:         0.75em 1.5em;
+}
+
+.floatbox table.simple {
+   margin:          0.75em 0;
+}
+
+.floatbox table.simple th,
+.floatbox table.simple td.highlight,
+.floatbox table.simple th.highlight {
+   color:           inherit;
+   background:      white;
+   margin:          0;
+   padding:         0.25em 0.5em;
+}
+
+
+/* End of the Sinorcaish-lite style sheet */
