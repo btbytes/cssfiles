@@ -24,3 +24,20 @@ Demo image:
 
 ![100e2r sample](demo/100e2r.png
 ).
+
+
+Sinorcaish-lite
+---------------
+
+This is stripped down version of [Sinorcaish][sinorcaish] stylesheet,
+primarily used to preview output of Pandoc in Emacs.
+
+
+Others
+------
+
+Other files are exact copies of CSS files from their respective authors'
+websites, stored here for easy access.
+
+
+[sinorcaish]: http://www.zap.org.au/documents/styles/sinorcaish/example/
